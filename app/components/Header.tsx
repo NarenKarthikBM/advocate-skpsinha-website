@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, Box, Burger, Container, Group, Menu, Modal, Stack, Tabs, Text, useMantineTheme } from "@mantine/core";
+import { Avatar, Box, Burger, Container, getGradient, Group, Menu, Modal, Stack, Tabs, Text, useMantineTheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconMail, IconPhone } from "@tabler/icons-react";
 import Link from "next/link";
@@ -91,7 +91,7 @@ export function Header() {
           </Tabs.List>
         </Tabs>
       </Modal>
-      <Box py="md" style={{ backgroundColor: theme.colors.primary[2] }}>
+      <Box py="md" c={"white"} style={{ background: "linear-gradient(130deg, rgb(105, 68, 238) 0%, rgb(84, 161, 198) 100%)" }}>
         <Container size="lg">
           <Group justify="space-between" align="center">
             <Group w={"300px"}>
@@ -103,15 +103,15 @@ export function Header() {
             <Group visibleFrom="md">
               <Group>
                 <IconPhone size={20} />
-                <Text size={"sm"} component="a" href="tel:+91">
-                  +91-
+                <Text size={"sm"} component="a" href="tel:+919939678937">
+                  +91-99396 78937
                 </Text>
               </Group>
               <Text size={"sm"}>|</Text>
               <Group>
                 <IconMail size={20} />
-                <Text size={"sm"} component="a" href="mailto:sample@gmail.com">
-                  SAMPLE@GMAIL.COM
+                <Text size={"sm"} component="a" href="mailto:skpsinha44@gmail.com">
+                  skpsinha44@gmail.com
                 </Text>
               </Group>
             </Group>

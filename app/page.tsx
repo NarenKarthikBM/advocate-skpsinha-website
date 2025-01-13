@@ -1,7 +1,7 @@
 "use client";
-import { ActionIcon, Button, Card, Center, Container, Flex, getGradient, Group, Image, SimpleGrid, Stack, Text, Title, useMantineTheme } from "@mantine/core";
+import { ActionIcon, Button, Card, Center, Container, Flex, getGradient, Group, Image, List, SimpleGrid, Stack, Text, Title, useMantineTheme } from "@mantine/core";
 import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, IconGavel, IconMail, IconPhone } from "@tabler/icons-react";
-import { PRACTICE_AREAS_LIST } from "./utils/lists";
+import { ABOUT_CARDS, PRACTICE_AREAS_LIST } from "./utils/lists";
 
 export default function Home() {
   const theme = useMantineTheme();
@@ -49,9 +49,25 @@ export default function Home() {
             </Text>
           </Stack>
           <Flex align={"center"} justify={"center"}>
-            <Card shadow="sm" padding="lg" radius="md" withBorder w={{ base: "100%", md: "80%" }}>
+            <Card
+              className="hoverBtn"
+              mih={"200px"}
+              mt={"2em"}
+              shadow="sm"
+              radius="lg"
+              p="lg"
+              w={{ base: "100%", md: "75%" }}
+              style={{
+                background: getGradient({ deg: 130, from: "primary.4", to: "secondary.5" }, theme),
+                color: "#FFFFFF",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              mx={"auto"}
+            >
               <Stack gap="md">
-                <Text size="xl" fw={700} ta={"center"}>
+                <Text my={"0.5em"} size="1.5rem" fw={700} ta={"center"}>
                   Book An Appointment
                 </Text>
                 <Button className="hoverBtn" color="primary.9" variant="filled" size="lg" radius="md">
@@ -86,18 +102,49 @@ export default function Home() {
           }}
         />
         <Container size={"lg"} mih={"100vh"} pos={"relative"} py={"3em"} id="about">
-          <Flex align={"center"} justify={"space-evenly"} direction={"column"} mt={"3em"}>
-            <Title order={2} fw={800} size={"2em"} ta={"center"} c={"primary.9"} hiddenFrom="sm">
+          <Flex justify={"space-evenly"} direction={"column"} mt={"3em"}>
+            <Title order={2} fw={800} size={"2em"} ta={"center"} c={"primary.9"} hiddenFrom="sm" my={"1em"}>
               About
             </Title>
-            <Title order={2} fw={800} size={"3em"} ta={"center"} c={"primary.9"} visibleFrom="sm" my={"2em"}>
+            <Title order={2} fw={800} size={"3em"} ta={"center"} c={"primary.9"} visibleFrom="sm" my={"1em"}>
               About
             </Title>
             <Text size="lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero possimus aliquid qui voluptatem atque minus doloremque reiciendis nulla illo. Quibusdam aliquam illo optio eligendi quisquam
-              ea quia facere ex porro? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis labore totam modi fugit nulla atque explicabo rerum molestias magni autem commodi ex obcaecati
-              excepturi, distinctio dignissimos. Delectus deleniti ipsum vitae.
+              Advocate Sachchida Nand Kishore Prasad Sinha has been practicing and handling cases independently with a result oriented approach, both professionally and ethically and has now acquired
+              many years of professional experience in providing legal consultancy and advisory services. Advocate Sachchida Nand Kishore Prasad Sinha provides services in various fields of civil
+              laws, criminal laws, corporate laws, family laws, consumer cases, property related matters, matrimonial related matters and drafting and vetting of various agreements and documents.
+              Advocate Sachchida Nand Kishore Prasad Sinha has over 57 years of experience in the legal field, providing expert advice and representation in various legal matters.
             </Text>
+            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg" mt="2em">
+              {ABOUT_CARDS.map((val, index) => (
+                <Card
+                  className="hoverBtn"
+                  key={index}
+                  mih={"200px"}
+                  mt={"2em"}
+                  mx={"auto"}
+                  shadow="sm"
+                  radius="lg"
+                  // p="lg"
+                  w={"75%"}
+                  style={{
+                    background: getGradient({ deg: 130, from: "primary.4", to: "secondary.5" }, theme),
+                    color: "#FFFFFF",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "1em",
+                  }}
+                >
+                  <Text size="1.5rem" mb={"1em"} ta="center">
+                    {val.key}
+                  </Text>
+                  <Text size="2rem" fw={700} ta="center">
+                    {val.value}
+                  </Text>
+                </Card>
+              ))}
+            </SimpleGrid>
           </Flex>
         </Container>
         <Container size={"lg"} mih={"100vh"} pos={"relative"} py={"3em"} id="practice-areas">
@@ -119,7 +166,7 @@ export default function Home() {
                 p="lg"
                 w={260}
                 style={{
-                  background: getGradient({ deg: 130, from: "primary.4", to: "secondary.3" }, theme),
+                  background: getGradient({ deg: 130, from: "primary.4", to: "secondary.5" }, theme),
                   color: "#FFFFFF",
                   display: "flex",
                   alignItems: "center",
@@ -141,8 +188,8 @@ export default function Home() {
           </SimpleGrid>
         </Container>
         <Container mih={"100vh"} size={"lg"} pos={"relative"} py={"3em"} id="contact">
-          <Title order={2} fw={800} size={"2em"} ta={"center"} c={"primary.9"} hiddenFrom="sm">
-            Contact
+          <Title order={2} fw={800} size={"2em"} ta={"center"} c={"primary.9"} my={"2em"} hiddenFrom="sm">
+            Get In Touch
           </Title>
           <Title order={2} fw={800} size={"3em"} ta={"center"} c={"primary.9"} my={"2em"} visibleFrom="sm">
             Get In Touch
@@ -176,11 +223,11 @@ export default function Home() {
                     Advocate Sachchida Nand Kishore Prasad Sinha has been practicing law for over 20 years, specializing in civil and criminal cases. He is known for his dedication to his clients and
                     his commitment to justice.
                   </Text>
-                  <Text size="xl" ta={"center"} c={"primary.9"}>
-                    Phone: <b>+1234567890</b>
+                  <Text size="xl" ta={"center"} c={"primary.9"} component="a" href="tel:+919939678937">
+                    Phone: <b>+91-99396 78937</b>
                   </Text>
-                  <Text ta={"center"} size="xl" c={"primary.9"}>
-                    Email: <b>example@example.com</b>
+                  <Text ta={"center"} size="xl" c={"primary.9"} component="a" href="mailto:skpsinha44@gmail.com">
+                    Email: <b>skpsinha44@gmail.com</b>
                   </Text>
 
                   <Group gap={0} className={"footerSocial"} justify="flex-end" wrap="nowrap">

@@ -14,6 +14,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -38,5 +39,14 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+.hoverBtn {
+  cursor: pointer;
+  transition: transform 250ms ease, filter 250ms ease;
+  &:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
   }
 }

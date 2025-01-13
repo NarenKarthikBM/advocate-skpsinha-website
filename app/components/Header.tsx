@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, Box, Burger, Container, getGradient, Group, Menu, Modal, Stack, Tabs, Text, useMantineTheme } from "@mantine/core";
+import { Avatar, Box, Burger, Container, Group, Menu, Modal, Stack, Tabs, Text, useMantineTheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconMail, IconPhone } from "@tabler/icons-react";
 import Link from "next/link";

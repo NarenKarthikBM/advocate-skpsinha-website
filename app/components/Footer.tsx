@@ -17,8 +17,6 @@ const data = [
 ];
 
 export function Footer() {
-  const theme = useMantineTheme();
-
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
       <Text key={index} className={"footerLink"} style={{ display: "block", padding: "3px 0" }} component={Link} href={link.href} onClick={(event) => event.preventDefault()} fw={700}>

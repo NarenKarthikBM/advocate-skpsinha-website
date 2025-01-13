@@ -1,5 +1,5 @@
 "use client";
-import { ActionIcon, Button, Card, Center, Container, Flex, getGradient, Group, Image, List, SimpleGrid, Stack, Text, Title, useMantineTheme } from "@mantine/core";
+import { ActionIcon, Button, Card, Center, Container, Flex, getGradient, Group, Image, SimpleGrid, Stack, Text, Title, useMantineTheme } from "@mantine/core";
 import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, IconGavel, IconMail, IconPhone } from "@tabler/icons-react";
 import { ABOUT_CARDS, PRACTICE_AREAS_LIST } from "./utils/lists";
 

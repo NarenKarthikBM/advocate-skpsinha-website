@@ -1,8 +1,7 @@
 "use client";
-import { ActionIcon, Avatar, Button, Card, Center, Container, Divider, Flex, getGradient, Group, Image, SimpleGrid, Stack, Text, Title, useMantineTheme } from "@mantine/core";
-import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, IconCalendar, IconGavel, IconMail, IconPhone } from "@tabler/icons-react";
+import { ActionIcon, Button, Card, Center, Container, Flex, getGradient, Group, Image, SimpleGrid, Stack, Text, Title, useMantineTheme } from "@mantine/core";
+import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, IconGavel, IconMail, IconPhone } from "@tabler/icons-react";
 import { PRACTICE_AREAS_LIST } from "./utils/lists";
-import { GroupPlaybackControls } from "framer-motion";
 
 export default function Home() {
   const theme = useMantineTheme();

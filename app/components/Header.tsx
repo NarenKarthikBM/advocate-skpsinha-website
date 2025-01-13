@@ -1,12 +1,12 @@
 "use client";
 
-import { Avatar, Box, Burger, Container, Group, Image, Menu, Modal, Stack, Tabs, Text, useMantineTheme } from "@mantine/core";
+import { Avatar, Box, Burger, Container, Group, Menu, Modal, Stack, Tabs, Text, useMantineTheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconMail, IconPhone } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navItems: { name: string; href: string; dropdown?: any[] }[] = [
+const navItems: { name: string; href: string; dropdown?: { href: string; name: string }[] }[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
   {

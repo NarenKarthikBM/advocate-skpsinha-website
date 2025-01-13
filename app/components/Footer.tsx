@@ -1,7 +1,7 @@
 "use client";
 
 import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
-import { ActionIcon, Avatar, Box, Container, Divider, Group, Image, Stack, Text, useMantineTheme } from "@mantine/core";
+import { ActionIcon, Avatar, Box, Container, Divider, Group, Stack, Text, useMantineTheme } from "@mantine/core";
 import Link from "next/link";
 
 const data = [
